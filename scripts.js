@@ -23,6 +23,7 @@ function drawBoard(size){
         for(var x =0; x < size; x++){
             let cell = document.createElement("div");
             cell.classList = "gridCell";
+            cell.setAttribute("style", "opacity: 0%")
             cell.addEventListener("hover", draw)
             row.appendChild(cell);
         }
