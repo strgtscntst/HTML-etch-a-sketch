@@ -32,7 +32,9 @@ function drawBoard(size){
 
 //Grid Deletion
 function nukeGrid(){
-
+    while(playArea.firstChild){
+        playArea.removeChild(playArea.firstChild);
+    }
 }
 //Drawing on Grid
 function draw(){
