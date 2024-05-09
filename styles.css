@@ -2,3 +2,15 @@
 /* *{
     border: 1px dotted gray;
 } */
+
+.gridCell{
+    /* height: 30px;
+    width:30px;
+    display:inline-block;
+    background-color: black; */
+    /* opacity:0; */
+}
+
+.gridRow{
+
+}

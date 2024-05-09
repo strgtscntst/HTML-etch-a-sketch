@@ -15,11 +15,19 @@ sizeButton.addEventListener("click", () => {
 
 //Grid Creation
 function drawBoard(size){
-    nukeGrid();
-//  -create row * sizeInput
-//      -create item on row * sizeInput
-            //  -addEventListener for hover => draw
-            //      -
+
+    //  -create row * sizeInput
+    for(var i = 0; i < size; i++){
+        let row = document.createElement("div");
+        row.classList = "gridRow";
+        for(var x =0; x < size; x++){
+            let cell = document.createElement("div");
+            cell.classList = "gridCell";
+            cell.addEventListener("hover", draw)
+            row.appendChild(cell);
+        }
+        playArea.appendChild(row);
+    }
 }
 
 //Grid Deletion
