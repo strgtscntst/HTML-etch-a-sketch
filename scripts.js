@@ -39,6 +39,8 @@ function nukeGrid(){
 }
 //Drawing on Grid
 function draw(cell){
+    //straight draw
     cell.style.background = "black"
     //change css opacity property by 10%
+
 }
