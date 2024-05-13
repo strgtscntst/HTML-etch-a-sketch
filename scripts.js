@@ -23,6 +23,7 @@ function drawBoard(size){
         for(var x =0; x < size; x++){
             let cell = document.createElement("div");
             cell.classList = "gridCell";
+            cell.style.opacity = 0;
             //draw
             cell.addEventListener("mouseenter", () => draw(cell));
             row.appendChild(cell);
@@ -39,8 +40,7 @@ function nukeGrid(){
 }
 //Drawing on Grid
 function draw(cell){
-    //straight draw
-    cell.style.background = "black"
     //change css opacity property by 10%
-
+    cell.style.opacity = parseFloat(cell.style.opacity) + 0.1;
+    console.log(cell.style.opacity);
 }
