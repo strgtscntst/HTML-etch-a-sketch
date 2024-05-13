@@ -23,7 +23,8 @@ function drawBoard(size){
         for(var x =0; x < size; x++){
             let cell = document.createElement("div");
             cell.classList = "gridCell";
-            cell.addEventListener("mousenter", draw);
+            //draw
+            cell.addEventListener("mouseenter", () => draw(cell));
             row.appendChild(cell);
         }
         playArea.appendChild(row);
@@ -37,12 +38,7 @@ function nukeGrid(){
     }
 }
 //Drawing on Grid
-function draw(){
-    const currOpacity = parseFloat(
-        window.getComputerStyle(grid).getPropertyValue("--grid_Opacity");
-        const opacity = math.min(currOpacity + 0.1, 1;)
-    )
-
-    cell.style.setProperty("--grid_Opacity", opacity);
+function draw(cell){
+    cell.style.background = "black"
     //change css opacity property by 10%
 }
